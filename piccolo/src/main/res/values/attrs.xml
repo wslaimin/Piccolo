@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="mask" format="string|color|reference" />
+    <attr name="shining" format="boolean" />
+    <attr name="shining_paddingLeft" format="dimension" />
+    <attr name="shining_paddingRight" format="dimension" />
+    <attr name="shining_paddingTop" format="dimension" />
+    <attr name="shining_paddingBottom" format="dimension" />
+    <declare-styleable name="PiccoloLayout">
+        <attr name="mask" />
+        <attr name="shining" />
+        <attr name="shining_paddingLeft" />
+        <attr name="shining_paddingRight" />
+        <attr name="shining_paddingTop" />
+        <attr name="shining_paddingBottom" />
+    </declare-styleable>
+</resources>

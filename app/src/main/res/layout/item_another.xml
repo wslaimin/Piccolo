@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:gravity="center">
+
+    <com.lm.piccolo.view.PiccoloLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:mask="com.lm.piccolo.drawable.ImageShiningDrawable"
+        app:shining="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_bmw" />
+    </com.lm.piccolo.view.PiccoloLayout>
+
+    <com.lm.piccolo.view.PiccoloLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="5dp"
+        app:mask="com.lm.piccolo.drawable.ImageShiningDrawable"
+        app:shining="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_bmw" />
+    </com.lm.piccolo.view.PiccoloLayout>
+
+    <com.lm.piccolo.view.PiccoloLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="5dp"
+        app:mask="com.lm.piccolo.drawable.ImageShiningDrawable"
+        app:shining="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_bmw" />
+    </com.lm.piccolo.view.PiccoloLayout>
+</LinearLayout>

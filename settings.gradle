@@ -1,0 +1,3 @@
+include ':piccolo'
+include ':app'
+rootProject.name = "Piccolo"

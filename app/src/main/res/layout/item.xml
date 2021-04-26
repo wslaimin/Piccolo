@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <com.lm.piccolo.view.PiccoloLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:mask="com.lm.piccolo.drawable.ImageShiningDrawable"
+        app:shining="true">
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="120dp"
+            android:src="@drawable/icon_bmw"
+            android:scaleType="centerCrop"/>
+
+    </com.lm.piccolo.view.PiccoloLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.lm.piccolo.view.PiccoloLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:mask="com.lm.piccolo.drawable.TextShiningDrawable"
+            app:shining_paddingLeft="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:text="宝马X5的“头号劲敌”"
+                android:textSize="18sp" />
+        </com.lm.piccolo.view.PiccoloLayout>
+
+        <com.lm.piccolo.view.PiccoloLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:mask="com.lm.piccolo.drawable.TextShiningDrawable"
+            app:shining_paddingLeft="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="6dp"
+                android:text="新款雷克萨斯GX460实车，比普拉多霸气!"
+                android:textSize="16sp" />
+        </com.lm.piccolo.view.PiccoloLayout>
+    </LinearLayout>
+
+</LinearLayout>
