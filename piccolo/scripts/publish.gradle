@@ -1,0 +1,66 @@
+project.plugins.apply('maven-publish')
+project.plugins.apply('signing')
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId = 'io.github.wslaimin'
+                artifactId = 'piccolo'
+                version = '1.0.0'
+
+                from components.release
+                // generate pom.xml
+                pom {
+                    name = 'Piccolo'
+                    description = 'Powerful skeleton and placeholder for views in Android'
+                    url = 'https://github.com/wslaimin/Piccolo'
+
+                    licenses {
+                        license {
+                            name = 'The Apache License, Version 2.0'
+                            url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        }
+                    }
+                    developers {
+                        developer {
+                            id = 'wslaimin'
+                            name = 'TFly'
+                            email = 'wslaimin@gmail.com'
+                        }
+                    }
+                    scm {
+                        connection = 'scm:git:git://github.com/wslaimin/Piccolo.git'
+                        developerConnection = 'scm:git:ssh://github.com/wslaimin/Piccolo.git'
+                        url = 'https://github.com/wslaimin/Piccolo.git'
+                    }
+                }
+            }
+        }
+
+        repositories {
+            maven {
+                // change to point to your repo
+                def releaseRepo = 'https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/'
+                def snapshotRepo = 'https://s01.oss.sonatype.org/content/repositories/snapshots/'
+
+                url = publishing.publications.release.version.endsWith('SNAPSHOT') ? snapshotRepo : releaseRepo
+                credentials {
+                    username = project.properties['credencial.username']
+                    password = project.properties['credencial.password']
+
+                }
+            }
+            maven {
+                name 'Build'
+                url = layout.buildDirectory.dir('repo')
+            }
+        }
+    }
+
+    if(project.properties['signing.keyId']&&project.properties['signing.password']&&project.properties['signing.secretKeyRingFile']){
+        signing {
+            sign publishing.publications.release
+        }
+    }
+}

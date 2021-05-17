@@ -20,8 +20,8 @@ public class TextShiningDrawable extends Drawable implements Drawable.Callback, 
 
     private TextShiningDrawable(TextShiningState state) {
         mState = state;
-        mState.mShinningHeight = 60;
-        mState.mSpace = 20;
+        mState.mShinningHeight = 50;
+        mState.mSpace = 16;
         mState.mMaxLines = Integer.MAX_VALUE;
         mDrawable = new ShiningDrawable();
         mDrawable.setCallback(this);
