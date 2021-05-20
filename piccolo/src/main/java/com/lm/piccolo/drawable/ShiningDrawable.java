@@ -48,7 +48,6 @@ public class ShiningDrawable extends ShapeDrawable implements Shining {
         return mAnimator.getDuration();
     }
 
-    @Override
     public void setShader(Shader shader) {
         mShader = shader;
         invalidateSelf();
@@ -90,7 +89,6 @@ public class ShiningDrawable extends ShapeDrawable implements Shining {
 
     @Override
     protected void onDraw(Shape shape, Canvas canvas, Paint paint) {
-        super.onDraw(shape, canvas, paint);
         paint.setShader(mShader);
         getShape().draw(canvas, paint);
     }

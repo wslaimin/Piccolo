@@ -205,7 +205,6 @@ public class TextShiningDrawable extends Drawable implements Drawable.Callback, 
         return mDrawable.getDuration();
     }
 
-    @Override
     public void setShader(Shader shader) {
         mShader = shader;
         mDrawable.setShader(shader);

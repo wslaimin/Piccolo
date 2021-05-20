@@ -12,7 +12,7 @@ class AdapterUtil {
         }
         SparseIntArray viewTypes = new SparseIntArray();
         for (Integer id : ids) {
-            if (viewTypes.get(id, -1) != -1) {
+            if (viewTypes.indexOfValue(id) != -1) {
                 continue;
             }
             viewTypes.put(viewTypes.size(), id);
