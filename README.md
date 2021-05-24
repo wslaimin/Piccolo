@@ -37,7 +37,7 @@ support:
 
 ```
 dependencies {
-    implementation 'io.github.wslaimin:piccolo:1.0.0'
+    implementation 'io.github.wslaimin:piccolo:1.0.1'
 }
 ```
 

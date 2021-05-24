@@ -7,7 +7,7 @@ afterEvaluate {
             release(MavenPublication) {
                 groupId = 'io.github.wslaimin'
                 artifactId = 'piccolo'
-                version = '1.0.0'
+                version = '1.0.1'
 
                 from components.release
                 // generate pom.xml
@@ -48,7 +48,6 @@ afterEvaluate {
                 credentials {
                     username = project.properties['credencial.username']
                     password = project.properties['credencial.password']
-
                 }
             }
             maven {
